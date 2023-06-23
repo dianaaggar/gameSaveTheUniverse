@@ -1,0 +1,40 @@
+@keyframes battlegame {
+    
+}
+body{
+    background-image: url('https://media.tenor.com/zXH5rKWc9XkAAAAC/universe-galaxy.gif');
+    background-size: cover;
+}
+.gamespace{
+    /* border:solid red; */
+    height:350px;
+    margin:1em;
+    display:flex;
+    justify-content: space-between;
+}
+
+
+.playerOne{
+    /* border:solid blue; */
+}
+.playerTwo{
+    /* border:solid blue; */
+}
+.pict1, .pict2{
+    width: 320px;
+    height: 350px;
+    margin-top: 300px;
+}
+.health{
+    color:aliceblue;
+    font-weight: bold;
+   
+}
+button{
+    color: red;
+    
+}
+.animation{
+    animation: battlegame 4s ease-in infinite;
+}
+
