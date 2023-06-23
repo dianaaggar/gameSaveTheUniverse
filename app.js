@@ -83,26 +83,36 @@ console.log(counter,":Counter")
 console.log("Current life:", currentAlien)
 
 
-// the palyer attacks first:
+// the palyer attacks first:S
 
 const playerAttacks = () => {
-  console.log("player attacks first the alien1"); 
+  console.log(`player attacks first ${currentAlien.name}`); 
  let power = player.firepower;
  let currentLife = currentAlien.health
-  let attack = (currentLife -= power);
-  player.hero001 = attack;
+  
+  currentAlien.health = currentLife -=power
   console.log(`${player.name} attack ${currentAlien.name} with power of ${power}`);
-  console.log(`${currentAlien.name} health now is ${attack}`);
+  console.log(`${currentAlien.name} health now is ${currentAlien.health}`);
+  if(currentAlien.health <= 0 ){
+    console.log(`${currentAlien.name} is died`)
+    switchAliens()  
+  }
 };
   
 
-
   //If you destroy the firts alien, you can attack the next alien 
 const switchAliens = () => {
-    console.log("ALIENs SWITCHED");
+    if(counter <5){
+      counter++
+      console.log("ALIENS SWITCHED");
+    }
+    else{
+      console.log(`all aliens died... you win the game`)
+    }
+    currentAlien= aliensArray[counter]
     let enemy = document.querySelector(".playerTwo");
     let newEnemy = document.createElement("img");
-    newEnemy.setAttribute("src", allAliens[counter]);
+    newEnemy.setAttribute("src",currentAlien.image);
     newEnemy.setAttribute("class", "playerTwo");
     enemy.replaceWith(newEnemy);
   };
@@ -127,11 +137,9 @@ const determineLifeAlien = () => {
       counter++
       currentAlien = allAliens[counter]
       console.log("Current life:", currentAlien)
-     
-  
+    
     } else {
-      alien2Attack()
-     
+      alienAttacks()
     }
 }
 
