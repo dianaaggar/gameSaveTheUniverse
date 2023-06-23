@@ -5,6 +5,12 @@ body{
     background-image: url('https://media.tenor.com/zXH5rKWc9XkAAAAC/universe-galaxy.gif');
     background-size: cover;
 }
+.title{
+    color: greenyellow;
+    text-align: center;
+    font-weight: bold;
+    font-size: 80px;
+}
 .gamespace{
     /* border:solid red; */
     height:350px;
