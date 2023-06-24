@@ -39,7 +39,7 @@ let alien2 = {
     firepower: getRandom(2,4),
     turnToAttack: false,
 
-    image: 'https://66.media.tumblr.com/5c56bf25fafc43d473d73cb4da4a35fe/tumblr_mfi0zq4lkO1rfjowdo1_500.gif'
+    image: 'https://i.pinimg.com/originals/63/2f/35/632f355dc0c6d53b96705fcb757168fb.gif'
 }
 let alien3 = {
     name: "a003",
@@ -107,7 +107,7 @@ const switchAliens = () => {
       console.log("ALIENS SWITCHED");
     }
     else{
-      console.log(`all aliens died... you win the game`)
+      console.log(`the alien6 still alive he is attacking you now`)
     }
     currentAlien= aliensArray[counter]
     let enemy = document.querySelector(".playerTwo");
@@ -122,7 +122,7 @@ const switchAliens = () => {
 const determineHealthPlayer = () => {
     console.log(player.health);
     if (player.health <= 0) {
-     console.log("the alien killed you...GAME OVER")
+     console.log("the alien6 still alive he is attacking you now ")
     } else {
         console.log("the alien missed you. you survive")
       startRound(currentAlien)
